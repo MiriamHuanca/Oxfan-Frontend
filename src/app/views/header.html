@@ -1,0 +1,32 @@
+<div class="cabecera">
+
+  <div>
+    <div ng-click="oxfam.exampleShowHide()">
+      <div class="img-x"
+           ng-class="{
+            largeWidth: oxfam.varShowHide == true,
+            smallWidth: oxfam.varShowHide != true}">
+      </div>
+
+    </div>
+     <nav class="menu" ng-if="!oxfam.varShowHide">
+        <ul>
+          <li><a href="#/openData">OPEN DATA</a></li>
+          <li><a href="#/oxfam_dos">RELACIONES DE DATOS* (DASHBOARD)</a></li>
+          <li><a href="#">HISTORIAS</a></li>
+          <li><a href="#">QUIENES SOMOS</a></li>
+          <li><a href="#/contacto">CONTACTO</a></li>
+          <li><a href="#/oxfam_tres">OXFAM</a></li>
+        </ul>
+      </nav>
+
+  </div>
+
+
+  <div class="btn-dos">
+    <a href="#/oxfam"><img src="../../assets/img-oxfam/logo-oxfam.png" class="oxfam-m"></a>
+    <div class="fis">FISCALIDAD</div>
+    <div class="vl"></div>
+  </div>
+  <div class="img-bus"></div>
+</div>

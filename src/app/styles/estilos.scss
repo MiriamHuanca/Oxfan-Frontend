@@ -1,0 +1,758 @@
+@import "font";
+
+@mixin into-xs() {
+  @media (max-width: 778px) {
+    @content ;
+  }
+}
+
+.cabecera{
+  @extend .container-fluid;
+  font-family: OxfamGlobalHeadline-Regular,sans-serif;
+  padding: 0px 0px ;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: #75C044;
+  z-index: 10;
+  @include into-xs(){
+    height: 50px;
+  }
+
+
+  .img-x{
+    width: 22px;
+    height: 21px;
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    @include into-xs(){
+      left: 12px;
+      top: 11px;
+    }
+  }
+
+  .img-bus{
+    background-image: url("../../assets/img-oxfam/buscar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+
+    @include into-xs(){
+      right: 11px;
+      top: 9px;
+    }
+  }
+
+  .btn-dos{
+    width: 553px;
+    height: 111px;
+    border-radius: 270px 270px 270px 270px;
+    padding: 14px 18px 9px 80px;
+    position: relative;
+    margin: 0px auto;
+    z-index: 9;
+    background-color: #75C044;
+    @include into-xs(){
+      width: 250px;
+      height: 78px;
+      border-radius: 100px 100px 100px 100px;
+    }
+
+    .oxfam-m{
+      width: 133px;
+      height: 50px;
+      margin-top: 15px;
+      margin-left: -20px;
+      @include into-xs(){
+        width: 85px;
+        height: 28.5px;
+        margin-left: -65px;
+        margin-top: 10px;
+      }
+    }
+
+    .vl {
+      border-left: 3px solid white;
+      height: 110px;
+      position: absolute;
+      left: 210px;
+      top: 0px;
+      @include into-xs(){
+        height: 77px;
+        left: 110px;
+      }
+    }
+    .fis{
+      font-weight: bold;
+      color: white;
+      font-size: 49px;
+      position: absolute;
+      top: 15px;
+      right: 40px;
+      @include into-xs(){
+        font-size: 20px;
+        top: 20px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+.menu{
+  width: 100%;
+  height: 210px;
+  background: #B8E986;
+  position: absolute;
+  top: 50.1px;
+  padding-top: 75px;
+  //display: none;   // esto lo esconde
+
+  @include into-xs(){
+    height: 353px;
+    top: 50px;
+    padding-top: 30px;
+  }
+
+  ul{
+    list-style: none;
+    li{
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      padding: 15px;
+      @include into-xs(){
+        display: block;
+        width: 100%;
+        padding: 9px;
+      }
+      a{
+        color: #75C044;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.largeWidth{
+  background-image: url("../../assets/img-oxfam/icon menu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.smallWidth{
+  background-image: url("../../assets/img-oxfam/Group.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.contenido{
+  @extend .container-fluid;
+  position: relative;
+  margin: 0px;
+  padding: 0px 0px;
+
+  .mano{
+    width: 100%; //1440px;
+    height: 744px;
+    background: #422076 100%;
+    background-image: url("../../assets/img-oxfam/textura-fondo.png");
+    background-size: 200%;
+    //position: relative;
+    @include into-xs(){
+      height: 482px;
+      margin-top: 50px;
+    }
+
+    .img-mano{
+      width: 95%;
+      height: 500px;
+      background-image: url("../../assets/img-oxfam/ilustracion_mano.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: relative;
+      top: 235px;
+
+      @include into-xs(){
+        top: 200px;
+      }
+    }
+
+
+    p{
+      padding: 165.3px 650px 0px 75px;
+      color: white;
+      font-size: 52px;
+      font-weight: bold;
+      float: left;
+      @include into-xs(){
+        padding: 78px 0px 0px 5px;
+        font-size: 26px;
+      }
+      .c1{
+        color: #75C044;
+        text-decoration: white;
+      }
+      .c2{
+        color: #F9C209;
+        text-decoration: white;
+      }
+      .c3{
+        color: #c3325f;
+        text-decoration: white;
+      }
+    }
+
+    .img-des{
+      width: 357px;
+      height: 67px;
+      border-radius: 32px 32px 32px 32px;
+      font-weight: bold;
+      padding: 14px 1px 9px 55px;
+      color: white;
+      font-size: 30px;
+      background: #F47B1F 100%;
+      position: absolute;
+      top: 509px;
+      left: 120px;
+      @include into-xs(){
+        width: 95%;
+        padding: 14px 0px 0px 50px;
+        top: 385px;
+        left: 10px;
+        font-size: 25px;
+      }
+      &::after{
+        content: url("../../assets/img-oxfam/descargar.png");
+        position: relative;
+        z-index: 9;
+        left: -40px;
+        top: -41px;
+        @include into-xs(){
+          left: -40px;
+          top: -38px;
+        }
+      }
+    }
+
+
+
+  }
+  .america{
+    width: 100%; //1440px;
+    height: 196px;
+    background: #49C7ED 100%;
+    background-image: url("../../assets/img-oxfam/textura-celeste.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include into-xs(){
+      height: 400px;
+      padding: 0px;
+    }
+    .img-ame{
+      width: 165px;
+      height: 215px;
+      background-image: url("../../assets/img-oxfam/mapa1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      float: left;
+      margin: 0px 0px 0px 129px;
+      @include into-xs(){
+        padding: 0px;
+        display: block;
+        margin: 15px 0px 0px 80px;
+      }
+    }
+    p{
+      padding: 60.9px 10px 65.5px 40.7px;
+      color: white;
+      font-size: 52px;
+      font-weight: bold;
+      float: left;
+      @include into-xs(){
+        padding: 25px 0px;
+        font-size: 35px;
+        text-align: center;
+      }
+
+      .c1{
+        color: #c3325f;
+        text-decoration: white;
+      }
+      .c2{
+        color: #f89406;
+        text-decoration: white;
+      }
+      .c3{
+        color: #75C044;
+        text-decoration: white;
+      }
+      .c4{
+        color: deeppink;
+        text-decoration: white;
+      }
+      .c5{
+        color: #f0ad4e;
+        text-decoration: white;
+      }
+      .c6{
+        color: #a000a0;
+        text-decoration: white;
+      }
+
+    }
+  }
+}
+
+.pie{
+  @extend .container-fluid;
+  position: relative;
+  margin-top: -19px;
+  padding: 0px 0px;
+
+  .oxfam{
+    width: 100%; //1440px;
+    height: 110px;
+    background-color: #75C044;
+    padding: 30.1px 0px 30.1px 57px;
+    position: relative;
+
+    @include into-xs(){
+      padding: 10px 35%;
+    }
+    .img-oxf{
+      width: 113px;
+      height: 42px;
+      background-image: url("../../assets/img-oxfam/logo-oxfam.png");
+      background-size: 100%;
+
+      @include into-xs(){
+        padding: 0px;
+        display: block;
+      }
+    }
+
+    p{
+      position: absolute;
+      color: white;
+      right: 76px;
+      bottom: 35px;
+      font-size: 10px;
+      @include into-xs(){
+        //top: 70px;
+        bottom: 20px;
+        right: 5%;
+      }
+    }
+  }
+  .pie{
+    width: 100%; //1440px;
+    height: 17.3px;
+    background-image: url("../../assets/img-oxfam/fondo-linea.png");
+  }
+}
+
+.contenido_dos{
+  @extend .container-fluid;
+  position: relative;
+  margin: 0px;
+  padding: 0px 0px;
+}
+
+.contenido_tres{
+  @extend .container-fluid;
+  position: relative;
+  margin: 0px;
+  padding: 0px 0px;
+  .img-arri{
+    width: 100%;
+    height: 270px;
+    background-image: url("../../assets/img-oxfam/background_qs2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include into-xs(){
+      height: 163px;
+    }
+    .img-tit{
+      width: 202px;
+      height: 53px;
+      position: relative;
+      top: 184.4px;
+      left: 43.5px;
+      font-size: 25px;
+      font-family: OxfamGlobalHeadline-Regular,sans-serif;
+      color: #FFFFFF;
+      font-weight: bold;
+      @include into-xs(){
+        top: 100px;
+        left: 36px;
+        font-size: 25px;
+      }
+    }
+  }
+  .parrafo{
+    color: #B3B3B3;
+    padding: 50px 137px;
+    font-size: 18px;
+    text-align: justify;
+    @include into-xs(){
+      padding: 35px 25px;
+    }
+
+    li{
+      margin-bottom: 5px;
+      margin-top: 10px;
+      text-indent: 1.5em;
+    }
+
+  }
+}
+
+.openData{
+  @extend .container-fluid;
+  position: relative;
+  font-family: OxfamGlobalHeadline-Regular,sans-serif;
+  margin: 0px;
+  padding: 0px 0px;
+  .alto-ex1{
+    width: 100%;
+    height: 50px;
+  }
+  .centro{
+    width: 100%;
+    height: 658px;
+    background-image: url("../../assets/img-oxfam/background.png");
+    background-size: cover;
+
+    @include into-xs(){
+      height: 470px;
+    }
+
+    .text-1{
+      position: absolute;
+      top: 85px;
+      left: 134px;
+      font-weight: bold;
+      font-size: 25px;
+      color: #75C044;
+      @include into-xs(){
+        top: 90px;
+        left: 20px;
+      }
+    }
+    h2{
+      position: absolute;
+      top: 156px;
+      left: 134px;
+      font-weight: bold;
+      font-size: 20px;
+      color: #9B9B9B;
+      @include into-xs(){
+        top: 140px;
+        left: 20px;
+        font-size: 18px;
+      }
+    }
+    p{
+      position: absolute;
+      top: 206px;
+      left: 134px;
+      font-size: 20px;
+      color: #9B9B9B;
+      font-family: OpenSans, sans-serif;
+      @include into-xs(){
+        top: 207px;
+        left: 20px;
+        font-size: 16px;
+      }
+    }
+    .btn-1{
+      width: 427px;
+      height: 54px;
+      border-radius: 27px 27px 27px 27px;
+      background: #B5D334;
+      position: relative;
+      top: 336px;
+      margin: 0px auto;
+      color: white;
+      font-size: 16px;
+      padding: 15px 0px 0px 140px;
+      font-family: OpenSans, sans-serif;
+      @include into-xs(){
+        width: 95%;
+        height: 54px;
+        top: 240px;
+        font-size: 16px;
+        padding: 15px 0px 0px 27%;
+      }
+      &::before {
+        content: url("../../assets/img-oxfam/Ingresos_tributarios.png");
+        position: absolute;
+        left: 30px;
+        top: 3px;
+        @include into-xs(){
+          top: 1.5px;
+          left: 7px;
+        }
+      }
+      &::after {
+        content: url("../../assets/img-oxfam/bt-desp.png");
+        position: relative;
+        right: -115px;
+        @include into-xs(){
+          left: 15%;
+        }
+      }
+    }
+    .btn-2{
+      width: 427px;
+      height: 30px;
+      border-radius: 15px 15px 15px 15px;
+      background: #B5D334;
+      position: relative;
+      top: 386px;
+      margin: 0px auto;
+      color: white;
+      font-size: 16px;
+      padding: 3px 0px 0px 50px;
+      font-family: OpenSans, sans-serif;
+      @include into-xs(){
+        width: 95%;
+        top: 260px;
+        padding: 4px 0px 0px 10px;
+        font-size: 13px;
+      }
+      &::after {
+        content: url("../../assets/img-oxfam/bt-desp.png");
+        position: relative;
+        right: -30px;
+        @include into-xs(){
+          right: -5px;
+        }
+      }
+    }
+    .btn-3{
+      width: 111px;
+      height: 34px;
+      border-radius: 17px 17px 17px 17px;
+      background: #F47B20;
+      position: relative;
+      top: 432px;
+      margin: 0px auto;
+      color: white;
+      font-size: 16px;
+      padding: 5px 20px;
+      font-family: OpenSans, sans-serif;
+      @include into-xs(){
+        width: 33%;
+        top: 280px;
+        padding: 5px 20px;
+      }
+    }
+  }
+  .segundo{
+    width: 100%;
+    height: 241px;
+    background: #F9C20A;
+    color: white;
+    @include into-xs(){
+      height: 264px;
+    }
+    .text-2{
+      padding: 10px 0px 0px 390px;
+      font-size: 20px;
+      @include into-xs(){
+        padding: 18px 0px 0px 20px;
+      }
+    }
+    .btn-4{
+      width: 70px;
+      height: 34px;
+      background: #75C044;
+      font-size: 16px;
+      margin: 17px 0px 0px 480px;
+      border-radius: 17px 17px 17px 17px;
+      @include into-xs(){
+        width: 20%;
+        margin: 25px  0px 0px 30px;
+      }
+    }
+    .btn-5{
+      width: 112px;
+      height: 34px;
+      background: #75C044;
+      font-size: 16px;
+      margin: 17px 0px 0px 56px;
+      border-radius: 17px 17px 17px 17px;
+      @include into-xs(){
+        width: 20%;
+        margin: 25px  0px 0px 30px;
+      }
+    }
+    .btn-6{
+      width: 112px;
+      height: 34px;
+      background: #75C044;
+      font-size: 16px;
+      margin: 17px 0px 0px 57px;
+      border-radius: 17px 17px 17px 17px;
+      @include into-xs(){
+        width: 20%;
+        margin: 25px 0px 0px 30px;
+      }
+    }
+    .ruta{
+      width: 498px;
+      height: 33px;
+      background: white;
+      font-family: OpenSans, sans-serif;
+      margin: 20px 31%;
+      color: #cccccc;
+      padding: 6px 140px;
+      @include into-xs(){
+        width: 15%;
+        margin: 20px  0px 0px 20px;
+      }
+    }
+    p{
+      width: 540px;
+      font-size: 12px;
+      font-family: OpenSans, sans-serif;
+      margin: 0px auto;
+      @include into-xs(){
+        width: 95%;
+        margin: 5px 15px;
+      }
+    }
+  }
+}
+
+.contacto{
+  @extend .container-fluid;
+  position: relative;
+  font-family: OpenSans, sans-serif;
+  margin: 0px;
+  padding: 0px 0px;
+
+  .izq{
+    margin-top: 50px;
+    width: 50%;
+    height: 900px;
+    background-image: url("../../assets/img-oxfam/background_contacto2x.png");
+    background-size: cover;
+    float: left;
+    padding: 65px 128px 0px 166px;
+    color: white;
+    @include into-xs(){
+      width: 100%;
+      height: 665px;
+      padding: 50px 20px 0px 20px;
+    }
+    h1{
+      font-family: OxfamGlobalHeadline-Regular,sans-serif;
+      @include into-xs(){
+        font-size: 26px;
+      }
+    }
+    .text-a{
+      margin-top: 76px;
+      font-family: OxfamGlobalHeadline-Regular,sans-serif;
+      width: 290px;
+      @include into-xs(){
+        font-size: 20px;
+        margin-top: 25px;
+      }
+    }
+    .text-b{
+      margin-top: 40px;
+      @include into-xs(){
+        margin-top: 22px;
+      }
+    }
+    p{
+      font-size: 18px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      @include into-xs(){
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  .der{
+    margin-top: 50px;
+    width: 50%;
+    height: 900px;
+    background-image: url("../../assets/img-oxfam/background.png");
+    background-size: cover;
+    float: left;
+    color: #75C044;
+    padding: 140px 69px 0px 56px;
+    @include into-xs(){
+      width: 100%;
+      height: 665px;
+      margin-top: 0px;
+      padding: 18px 26px 0px 27px;
+    }
+    h3{
+      font-family: OxfamGlobalHeadline-Regular,sans-serif;
+      margin-bottom: 87px;
+      @include into-xs(){
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
+    }
+    label{
+      width: 20%;
+      padding: 27px 8px 0px 0px;
+      font-size: 20px;
+      @include into-xs(){
+        width: 90%;
+        font-size: 18px;
+        padding: 10px 8px 0px 27px;
+      }
+    }
+    input{
+      width: 80%;
+      padding: 27px 8px 0px 0px;
+      float: right;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      @include into-xs(){
+        width: 90%;
+        padding: 15px 0px 0px 0px;
+      }
+    }
+    .text-men{
+      margin: 30px 8px 0px 0px;
+      @include into-xs(){
+        padding: 15px 8px 0px 0px;
+      }
+    }
+    .btn-e{
+      width: 104px;
+      height: 40px;
+      background: #75C044;
+      font-size: 16px;
+      color: white;
+      float: right;
+      margin-top: 53px;
+      padding: 10px 23px;
+      @include into-xs(){
+         margin: 27px 32%;
+      }
+    }
+
+  }
+}
+
+
